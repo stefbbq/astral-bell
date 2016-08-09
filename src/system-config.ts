@@ -44,6 +44,7 @@ const barrels: string[] = [
   'app/instagram',
   'app/social-link',
   'app/soundcloud',
+  'app/nav',
   /** @cli-barrel */
 ];
 

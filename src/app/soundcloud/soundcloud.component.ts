@@ -9,7 +9,7 @@ declare let SC:any
 })
 export class SoundCloudComponent implements OnInit {
 	
-	state:String = "hit play to start listening"
+	state:String = "start listening"
 	scIframe:any
 	sc:any
 	songTitle:String
@@ -17,12 +17,9 @@ export class SoundCloudComponent implements OnInit {
 	currentSong:Object
 	
 	//
-	// setup
+	// setup and initial events
 
-  constructor() {
-	  // this.renderer.listenGlobal("message", this.windowListener, false)
-	}	
-	
+  constructor() { }
   ngOnInit() {
 		this.scIframe = document.getElementById('sc-widget')
 		this.sc = SC.Widget(this.scIframe)
@@ -56,13 +53,6 @@ export class SoundCloudComponent implements OnInit {
 		}
 		
 		this.sc.isPaused()
-		this.sc.getCurrentSound()			
-	}
-	
-	//
-	// utils
-	
-	updateSongTitle(){
-		this.songTitle = 'jibbajabba'
+		this.sc.getCurrentSound()
 	}
 }
