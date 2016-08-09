@@ -1,0 +1,66 @@
+@import '../_shared/sass/vars';
+
+:host { 
+	display: block;
+	margin: 0px auto;
+}
+
+iframe { 
+	position: fixed; 
+	top: -100px; 
+	height: 100px; 
+	width: 100px; 
+//	opacity: 0; 
+}
+
+#controls {
+	display: block;
+	width: 280px;
+	text-align: center;
+	position: absolute;
+	top: 50vh;
+	left: calc(50vw - 140px);
+		
+	> * { display: inline-block; }
+	 
+	// button
+	#playButton {
+		height: 100px;
+		width: 100px;
+		border-radius: 100%;
+		border: 2px solid white;
+		background: url(../app/_shared/images/pauseIcon.png) center no-repeat;
+		background-size: 54%;
+		background-color: rgba(black, .2);
+		cursor: pointer;
+		transition: transform 200ms;
+	
+		&:hover { transform: scale(1.1, 1.1) }
+		&.paused {
+			background: url(../app/_shared/images/playIcon.png) center no-repeat;			
+			background-size: 54%;
+			background-color: rgba(black, .2);
+		}
+	}
+	
+	// info
+	p {
+		width: 100%;
+		font-size: 14px;
+		
+		span { font-family: HelveticaRoman; opacity: .6; }
+		.bold { font-family: HelveticaBold; opacity: 1; }
+	}
+}
+
+@media (max-width: 1024px) { 
+	#controls {
+		display: none;
+		top: 44vh;
+		
+		#playButton {
+			width: 60px;
+			height: 60px;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@import '../_shared/sass/vars';
+
+#instafeed { 
+	width: $feedWidthDT;
+	margin: 0px auto; 
+	
+	a { 
+		display: block; 
+		margin: 40px 0;
+		text-decoration: none;
+		
+		img { 
+			display: block; 
+			border-radius: 6px 6px 0 0;		
+			width: 100%; 
+			height: 100%; 
+		}
+		.caption { 
+			border-radius: 0 0 6px 6px;
+			font-family: HelveticaRoman;
+			font-size: 14px;
+			display: block;
+			margin: 0;
+			padding: 8px 6px 5px 6px;
+			text-decoration: none;
+			background: rgba(black, .4);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+  #instafeed {
+  	width: $feedWidthTB;
+		max-width: $feedWidthDT;
+  }
+}
+
+@media (max-width: 512px) {
+  #instafeed { }
+}
