@@ -1,3 +1,5 @@
+"use strict";
+
 // SystemJS configuration file, see links for more information
 // https://github.com/systemjs/systemjs
 // https://github.com/systemjs/systemjs/blob/master/docs/config-api.md
@@ -7,17 +9,10 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-	'instafeed': 'vendor/instafeed.js',
-	'soundcloud': 'vendor/node-soundcloud/lib'
-	// 'rxjs': 'node_modules/rxjs'
 };
 
 /** User packages configuration. */
 const packages: any = {
-	instafeed: { defaultExtension: 'js', main: 'instafeed.js' },
-	soundcloud: { defaultExtension: 'js', main: 'soundcloud.js' },
-	rxjs: { defaultExtension: 'js' },
-	'app': { defaultExtension: 'js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,11 +35,7 @@ const barrels: string[] = [
 
   // App specific barrels.
   'app',
-  'app/_shared',
-  'app/instagram',
-  'app/social-link',
-  'app/soundcloud',
-  'app/nav',
+  'app/shared',
   /** @cli-barrel */
 ];
 

@@ -27,13 +27,13 @@ export class SocialLinkComponent implements OnInit {
 	getType(): String {
 		switch(this.type){
 		case 'facebook':
-			return './app/_shared/images/social_facebook_g.png'
+			return './app/shared/images/social_facebook_g.png'
 			break
 		case 'instagram':
-			return './app/_shared/images/social_instagram_g.png'
+			return './app/shared/images/social_instagram_g.png'
 			break
 		case 'soundcloud':
-			return './app/_shared/images/social_soundcloud_g.png'
+			return './app/shared/images/social_soundcloud_g.png'
 			break
 		}
 	}
