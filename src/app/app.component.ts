@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { InstagramComponent } from './instagram/instagram.component'
-import { SocialLinkComponent } from './social-link/social-link.component'
-import { SoundCloudComponent } from './soundcloud/soundcloud.component'
-import { NavComponent } from './nav/nav.component'
+import { InstagramComponent } from './components/instagram/instagram.component'
+import { SocialLinkComponent } from './components/social-link/social-link.component'
+import { SoundCloudComponent } from './components/soundcloud/soundcloud.component'
+import { NavComponent } from './components/nav/nav.component'
 
 @Component({
   moduleId: module.id,

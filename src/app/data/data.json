@@ -1,0 +1,16 @@
+{
+	"sections": [
+		{
+			"title":"top"
+		},
+		{
+			"title":"about"
+		},
+		{
+			"title":"feed"
+		},
+		{
+			"title":"footer"
+		}
+	]
+}

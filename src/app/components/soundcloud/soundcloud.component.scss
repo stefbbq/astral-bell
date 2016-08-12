@@ -1,4 +1,4 @@
-@import '../shared/sass/vars';
+@import '../../shared/sass/vars';
 
 :host { 
 	display: block;
@@ -10,7 +10,6 @@ iframe {
 	top: -100px; 
 	height: 100px; 
 	width: 100px; 
-//	opacity: 0; 
 }
 
 #controls {

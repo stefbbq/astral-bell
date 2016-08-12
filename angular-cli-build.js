@@ -17,7 +17,7 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
 			'instafeed.js/**/*.+(js|js.map)',
-			'node-soundcloud/**/*.+(js|js.map)'
+			'ng2-page-scroll/**/*.+(js|js.map)'
     ]
   });
 };

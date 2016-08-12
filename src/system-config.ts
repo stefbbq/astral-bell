@@ -9,10 +9,12 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+	'ng2-page-scroll': 'vendor/ng2-page-scroll/'
 };
 
 /** User packages configuration. */
 const packages: any = {
+	'ng2-page-scroll': { defaultExtension: 'js', main: 'ng2-page-scroll.js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,6 +29,7 @@ const barrels: string[] = [
   '@angular/forms',
   '@angular/http',
   '@angular/router',
+  '@angular/router-deprecated',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
 

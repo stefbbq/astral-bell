@@ -17,7 +17,7 @@ export class SoundCloudComponent implements OnInit {
 	currentSong:Object
 	
 	//
-	// setup and initial events
+	// setup and constructor
 
   constructor() { }
   ngOnInit() {
