@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { DataService } from '../../data.service'
 // import { DataService } from './data.service'
 // import { PageScroll } from 'ng2-page-scroll'
 // import { ROUTER_DIRECTIVES, Router, RouterLink } from "@angular/router"
@@ -10,8 +11,7 @@ import { Component, OnInit } from '@angular/core'
 @Component({
   moduleId: module.id,
   selector: 'app-nav',
-	// directives: [ PageScroll ],
-	// providers: [ DataService ],
+	providers: [DataService],
   templateUrl: 'nav.component.html',
   styleUrls: ['nav.component.css']
 })
@@ -22,11 +22,17 @@ export class NavComponent implements OnInit {
 	//
 	// setup and constructor
 
-  constructor(
-		// private $dataService:DataService
-	) { }
-
-  ngOnInit() { }
+  constructor(private dataService:DataService) { }
+	ngOnInit(){
+		this.getData()
+	}
+	
+	//
+	// utilities
+	
+	getData(){
+		this.dataService.getData().then(sections => this.sections = sections['sections'])
+	}
 	
 	//
 	// events

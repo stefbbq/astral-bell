@@ -6,31 +6,34 @@
 	.top { 
 		min-height: 100vh;
 		
-		.logo { 
-			width: 95vw; 
-			max-width: 680px; 
-			margin: 0px auto; 
-			display: block; 
-			top: 36vh;
+		> div {
+			position: absolute;
+			top: 50vh;
 			left: 50vw;
 			transform: translate(-50%, -50%);
-			position: absolute;
-			transition: opacity 2s;
-		
-			&.init { 
-				opacity: 1; 
+			text-align: center;
+			
+			.logo { 
+				width: 95vw; 
+				max-width: 680px; 
+				margin: 0px auto; 
+				display: block; 
 				transition: opacity 2s;
-			}
+		
+				&.init { 
+					opacity: 1; 
+					transition: opacity 2s;
+				}
+			}			
 		}
+		
 		#downArrow {
-			background: url(../app/_shared/images/downArrow.png) center no-repeat;
+			background: url(../app/shared/images/downArrow.png) center no-repeat;
 			background-size: 50%;
 			height: 60px;
 			width: 120px;
 			opacity: .4;
-			position: absolute;
 			top: 94vh;
-			left: calc(50vw - 60px);
 		}
 		.upper {display: none; }
 	}

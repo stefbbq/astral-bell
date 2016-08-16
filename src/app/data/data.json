@@ -1,16 +1,16 @@
 {
 	"sections": [
 		{
-			"title":"top"
+			"title":"music"
 		},
 		{
-			"title":"about"
+			"title":"band"
 		},
 		{
-			"title":"feed"
+			"title":"photos"
 		},
 		{
-			"title":"footer"
+			"title":"contact"
 		}
 	]
 }

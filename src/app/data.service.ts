@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { Http, Response } from '@angular/http'
 import { Observable } from 'rxjs/Rx'
 import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/toPromise'
 
 @Injectable()
 export class DataService {
@@ -12,24 +13,35 @@ export class DataService {
 	//
 	// setup and constructor
  
-  constructor($http: Http) { 
-		this.data = {myData:[]};
-		$http.get('./app/data/data.json')
-			.map((res: Response) => res.json())
-			.subscribe(data => this.data = data,
-                 err => console.log(err),
-								 () => this.onDataLoadComplete())
+  constructor(private http: Http) { 
+		// this.data = {myData:[]};
+		
+
+		
+		
+		
 	}
 
 	//
 	// events
 	
-	onDataLoadComplete(){
-		this.sections = this.data['sections']
+	handleError(){
+		console.log('on dataloadcomplete')
+		// this.sections = this.data['sections']
 	}
 	
 	//
 	// getter
 	
-	getData() { return this.data }
+	getData() { 
+		// return Promise.resolve(this.sections)
+		// $http.get('./app/data/data.json')
+// 			.map((res: Response) => res.json())
+// 			.subscribe(data => this.data = data,
+// 	               err => console.log(err),
+// 								 () => this.onDataLoadComplete())
+		return this.http.get('./app/data/data.json')
+		           .toPromise().then(response => response.json() as Object[] )
+		           .catch(this.handleError);
+	}
 }

@@ -13,13 +13,8 @@ import { NavComponent } from './components/nav/nav.component'
 })
 
 export class AppComponent implements OnInit {
-	// init:String = ""
 	
-	ngOnInit(){
-		// setTimeout(() => this.timer(), 500)
-	}
+	constructor() {	}
+	ngOnInit(){	}
 	
-	timer(){
-		// this.init = 'init'
-	}
 }

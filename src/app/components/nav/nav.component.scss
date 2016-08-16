@@ -6,7 +6,15 @@
 	height: $headerHeight;
 	position: fixed;
 	top: 0px;
+	z-index: 100;
 }
+
+.logo {
+	position: absolute;
+	left: 0px;
+	height: calc(100% - 24px);
+	margin: 12px 0 12px $headerHeight / 3;
+}	
 
 ul {
 	list-style: none;
@@ -20,7 +28,7 @@ ul {
 	
 	li { 
 		display: inline-block;
-		margin-right: $headerHeight / 2 - 2px;
+		margin-right: $headerHeight / 3;
 		
 		a { 
 			width: 100%;
@@ -30,7 +38,7 @@ ul {
 			text-decoration: none;
 			opacity: .8;
 			transition: opacity 200ms;
-			font-size: 14px;
+			font-size: 13px;
 			font-family: HelveticaRoman; 			
 			cursor: pointer;			
 			

@@ -1,6 +1,7 @@
+<img class="logo" src="./app/shared/images/glyph.png"/>
 <ul>
 	<li *ngFor="let target of sections">
-		<a pageScroll href="{{target.title}}">
+		<a href="{{'#' + target.title}}">
 			{{target.title}}
 		</a>
 	</li>
