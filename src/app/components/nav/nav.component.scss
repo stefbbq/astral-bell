@@ -1,4 +1,5 @@
 @import "../../shared/sass/vars";
+@import "compass/css3";
 
 :host {
 	background: rgba(black, .6);
@@ -14,6 +15,10 @@
 	left: 0px;
 	height: calc(100% - 24px);
 	margin: 12px 0 12px $headerHeight / 3;
+	@include opacity(.8);
+	@include transition(all, 250ms);
+	
+	&:hover { @include opacity(1) }
 }	
 
 ul {
@@ -37,12 +42,15 @@ ul {
 			text-transform: uppercase;
 			text-decoration: none;
 			opacity: .8;
-			transition: opacity 200ms;
+			@include transition(all, 200ms);
 			font-size: 13px;
-			font-family: HelveticaRoman; 			
-			cursor: pointer;			
+			font-family: Helvetica; 			
+			cursor: pointer;	
 			
-			&:hover { opacity: 1 }
+			&:hover { 
+				@include opacity(1); 
+				color: saturate($secondary, 10);
+			}
 		}
 	}
 }

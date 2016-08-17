@@ -11,7 +11,7 @@ import { DataService } from '../../data.service'
 @Component({
   moduleId: module.id,
   selector: 'app-nav',
-	providers: [DataService],
+	providers: [ DataService ],
   templateUrl: 'nav.component.html',
   styleUrls: ['nav.component.css']
 })
@@ -34,10 +34,4 @@ export class NavComponent implements OnInit {
 		this.dataService.getData().then(sections => this.sections = sections['sections'])
 	}
 	
-	//
-	// events
-	
-	onDataLoadComplete(){
-		// this.sections = this.data['sections']
-	}
 }

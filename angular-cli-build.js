@@ -8,6 +8,10 @@ var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 
 module.exports = function(defaults) {
   return new Angular2App(defaults, {
+		sassCompiler: {
+		  cacheExclude: [/\/_[^\/]+$/],
+		  includePaths: [ 'node_modules/compass-mixins/lib' ]
+		},
     vendorNpmFiles: [
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',

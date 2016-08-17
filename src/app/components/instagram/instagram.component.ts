@@ -20,7 +20,7 @@ export class InstagramComponent implements OnInit {
 			get: 'user',
 			userId: '3275217278',
 			accessToken: '3275217278.945c202.92052ef935df43e9a284418747a26be0',
-			template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><span class="caption">{{caption}}</caption>',
+			template: '<a href="{{link}}" target="_blank"><div class="overlay"></div><img src="{{image}}" /><span class="caption">{{caption}}</caption>',
 			resolution: 'standard_resolution'
     })
     feed.run()

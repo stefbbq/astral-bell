@@ -1,3 +1,6 @@
+@import 'compass/css3';
+@import 'shared/sass/mixins';
+
 .content {
 	padding-bottom: 40px;
 	min-height: 100vh;
@@ -32,15 +35,15 @@
 			background-size: 50%;
 			height: 60px;
 			width: 120px;
-			opacity: .4;
+			@include opacity(.4);
 			top: 94vh;
 		}
 		.upper {display: none; }
 	}
 	.bottom { 
+		padding-top: 100px; 
 		.social-links { 
 			text-align: center; 
-//			opacity: 0;
 			transition: opacity 200ms;
 		
 			&.init { opacity: 1; }		
@@ -48,16 +51,20 @@
 	}
 }
 
-@media (max-width: 1024px) {
+@include respond-to(medium-screens) {
+//@media (max-width: 1024px) {
 	.upper {display: none; }
-	.content {		
-		.top { 
+	.content {
+		.top {
 			padding-top: 80px;
 			min-height: calc(100vh - 40px);
-			
+
 			.logo { top: 28vh;}
 			#downArrow { top: 78vh; }
-			.upper {display: block; position: absolute; top: 45vh; left: 50vw; transform: translate(-50%, -50%);}
+			.upper {
+				display: block; 
+				margin: 0px auto;
+			}
 		}
 	}
 }
